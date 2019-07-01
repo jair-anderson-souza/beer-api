@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jass2125/beer-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.1",
+    "require-dir": "^1.2.0"
   }
 }
