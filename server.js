@@ -13,7 +13,8 @@ requireDir('./src/models');
 const routes = require('./src/routes');
 
 mongoose.connect('mongodb://127.0.0.1:27017/beer', {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useCreateIndex: true
 });
 
 app.use('/api', routes);
