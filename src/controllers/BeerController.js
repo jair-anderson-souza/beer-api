@@ -1,5 +1,5 @@
 const axios = require('axios');
-const externApi = require('../config/extern-api');
+const api = require('../config/api');
 
 module.exports = {
 
@@ -11,12 +11,12 @@ module.exports = {
     if (req.query.size === null) {
       req.query.size = 5;
     }
-    const beers = await axios.get(`${externApi.api}?page=${req.query.page}&per_page=${req.query.size}`);
+    const beers = await axios.get(`${api.url}?page=${req.query.page}&per_page=${req.query.size}`);
     return resp.json(beers.data);
   },
 
   async getById(req, resp) {
-    const beers = await axios.get(`${externApi.api}/${req.params.id}`);
+    const beers = await axios.get(`${api.url}/${req.params.id}`);
     return resp.json(beers.data);
   }
 }
