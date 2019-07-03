@@ -10,6 +10,7 @@ const Beers = require('./controllers/BeerController');
 
 routes.get('/users', Users.listAll);
 routes.post('/users', Users.create);
+routes.post('/login', Users.login);
 routes.get('/beers', Beers.getAll);
 routes.get('/beers/:id', Beers.getById);
 
